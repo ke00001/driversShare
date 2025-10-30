@@ -1,0 +1,8 @@
+from building import *
+
+CPPPATH = [Dir('inc').abspath]
+src = Glob('src/*.c')
+
+group = DefineGroup('st7920_rt', src, depend = [], CPPPATH = CPPPATH)
+
+Return('group')
